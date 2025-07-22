@@ -1,0 +1,8 @@
+# Core Azure packages
+azure-ai-projects >= 1.0.0.b11
+azure-ai-agents>=1.1.0b3
+azure-identity>=1.23.0
+azure-cosmos>=4.12.0b1
+
+# OpenAI
+openai>=1.59.5
