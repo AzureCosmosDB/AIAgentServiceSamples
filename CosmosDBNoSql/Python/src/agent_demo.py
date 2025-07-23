@@ -36,8 +36,8 @@ def agent_demo():
         print(f"Created thread, ID: {thread.id}")
 
         # Examples of some user prompts for this agent
-        message = "What are some adventure locations for a guys trip?"
-        # message = "Book a trip for Paris from June 10th to June 20th."
+        message = "What are some adventure destinations for a trip?"
+        # message = "Book a trip for Queenstown from November 10th to November 20th."
         # message = "What cities are good to travel during June to July."
         # message = "Tell me something about new york city?"
         agent_client.messages.create(
