@@ -71,11 +71,12 @@ class CosmosDBAIAgentStore:
             self,
             city_name: str,
     ) -> List[dict]:
-        query = f"SELECT c.city_name, c.country, c.description, c.top_attractions FROM c WHERE c.city_name = '{city_name}'"
+        query = "SELECT c.city_name, c.country, c.description, c.top_attractions FROM c WHERE c.city_name = @city_name"
 
         try:
             results = self.trips_container.query_items(
                 query=query,
+                parameters=[{"name": "@city_name", "value": city_name}],
                 enable_cross_partition_query=True
             )
             return list(results)
